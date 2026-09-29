@@ -15,6 +15,7 @@ Chýbajúci preklad nespadne, len zostane po slovensky.
 import json
 import re
 import shutil
+import sys
 import pathlib
 from datetime import date
 from bs4 import BeautifulSoup
@@ -55,6 +56,19 @@ PAGES = ['index.html', 'vodne-fajky.html', 'menu.html', 'skola-majstra.html',
 # Meracie ID Google Analytics. Skript sa načíta AŽ po súhlase — pozri
 # assets/suhlas.js. Prázdny reťazec analytiku vypne úplne.
 GA_ID = 'G-ZXHSQ5NP3J'
+
+# Testovacie zostavenie:  python3 build.py --test
+#
+# Rieši dve veci, ktoré testovacie nasadenie inak pokazí:
+#   1. Google by testovaciu adresu zaindexoval ako duplikát hookah.sk.
+#      Preto noindex na každej stránke a robots.txt so zákazom.
+#   2. Testovacia návštevnosť by tiekla do ostrej GA property.
+#      Preto sa meracie ID nevloží a gtag sa nenačíta ani po súhlase.
+#
+# Lišta súhlasu, Consent Mode aj mapa za súhlasom fungujú aj v testovacom
+# zostavení — to je práve to, čo sa má odskúšať. Canonical zámerne mieri
+# na ostrú doménu: aj keby noindex zlyhal, Google smeruje tam.
+TEST = '--test' in sys.argv
 
 # priorita v sitemape
 PRIORITY = {'index.html': '1.0', 'vodne-fajky.html': '0.9', 'menu.html': '0.9',
@@ -264,16 +278,20 @@ def build_head(page, lang, title, desc):
     runtime = json.dumps({k: tr(k, lang) for k in RUNTIME_KEYS}, ensure_ascii=False,
                          separators=(',', ':'))
 
-    ga_id = f"window.SH_GA='{GA_ID}';" if GA_ID else ''
-    consent_default = CONSENT_DEFAULT if GA_ID else ''
+    # Consent Mode patrí do stránky vždy — je to mechanizmus súhlasu,
+    # nie analytika. Meracie ID sa v testovacom zostavení nevkladá.
+    ga_id = f"window.SH_GA='{GA_ID}';" if (GA_ID and not TEST) else ''
+    consent_default = CONSENT_DEFAULT
     fonty = font_links(base)
+    robots_meta = ('<meta name="robots" content="noindex, nofollow">' if TEST else
+                   '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">')
 
     return f'''<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+{robots_meta}
 <meta name="theme-color" content="#040405">
 <meta name="author" content="Smoking Hookah">
 
@@ -514,6 +532,12 @@ def write_sitemap():
 
 
 def write_robots():
+    if TEST:
+        # testovacia adresa sa nesmie dostať do indexu ako duplikát hookah.sk
+        (DIST / 'robots.txt').write_text(
+            'User-agent: *\n'
+            'Disallow: /\n', encoding='utf-8')
+        return
     (DIST / 'robots.txt').write_text(
         'User-agent: *\n'
         'Allow: /\n\n'
@@ -637,6 +661,9 @@ def main():
         print('         bash tools/stiahnut-fonty.sh')
         print('     a potom build znova — odkaz na Google z hlavičky vypadne.')
 
+    if TEST:
+        print('\n  TESTOVACIE ZOSTAVENIE — noindex, robots.txt zakazuje všetko,')
+        print('  meracie ID GA sa nevložilo. Na ostro spusti build.py bez --test.')
     print(f'\n  sitemap.xml · robots.txt · site.webmanifest · 404.html')
     print(f'  spolu {total/1024:.1f} KB HTML v {len(LANGS) * len(PAGES)} stránkach')
 

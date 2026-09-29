@@ -71,6 +71,27 @@ spoliehať z hlavy.
       ulica s orientačným bodom (Kontakt).
 - [ ] **Ceny kurzov** Školy majstra — teraz „na vyžiadanie".
 
+## 3b. Testovacie nasadenie najprv
+
+```bash
+bash tools/nasadit-test.sh
+```
+
+Založí súkromný repozitár `hookah-redesign-test`, pushne doň a nasadí
+na Vercel. Skript odmietne bežať, ak mu ako meno podáš `hookah-web`.
+
+Testovacie zostavenie (`python3 build.py --test`) má **noindex** na každej
+stránke, **robots.txt zakazuje všetko** a **meracie ID GA sa nevkladá**.
+Google teda testovaciu adresu nezaindexuje ako duplikát hookah.sk
+a testovacia návštevnosť netečie do ostrej GA property. Canonical zámerne
+mieri na `www.hookah.sk` — aj keby noindex zlyhal, Google smeruje tam.
+
+Lišta súhlasu, Consent Mode aj mapa za súhlasom fungujú aj tu; práve tie
+sa majú odskúšať. Po prijatí súhlasu sa GA nenačíta — to nie je chyba,
+meracie ID tam zámerne nie je.
+
+**Až prejde test, na ostro sa zostavuje BEZ `--test`.**
+
 ## 4. Samotná výmena
 
 ```bash
