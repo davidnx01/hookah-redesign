@@ -15,3 +15,4 @@ _nahlad.tgz
 
 # pomocné zoznamy chýbajúcich prekladov, vyrába ich tools/oznac.py
 i18n/_chyba-*.json
+.claude/
