@@ -173,9 +173,6 @@ Vercel nasadí automaticky po pushnutí.
 
 - [ ] Fotky: zostáva **6 šrafovaných rámov** (13 fotiek + 2 mapy osadené) + 12 fotiek
       chuťových mixov a ocenení, ktoré sa stále ťahajú zo Strapi
-- [ ] **Cena sandwichov a panini** — David ju dodá. Podnik ich reálne
-      ponúka, len nie sú v cenníku na starom webe. Doplniť do sekcie
-      Pochutiny v `src/menu.html` a preklady cez `python3 tools/oznac.py`.
 - [ ] **Fonty k nám:** `bash tools/stiahnut-fonty.sh` z normálneho terminálu.
       Kým to nebeží, `fonts.googleapis.com` sa načíta ešte PRED súhlasom
       a obchádza cookie lištu. Build to vypisuje ako varovanie.
@@ -259,6 +256,22 @@ sa tým zneplatnia a ľudia sa spýtajú znova, čo je správne.
 
 Po každej zmene textov spusti `python3 tools/oznac.py` — bez toho sa nové
 reťazce zobrazia v ruskej a ukrajinskej verzii po slovensky.
+
+## Pred nasadením
+
+```bash
+python3 build.py
+python3 tools/kontrola.py     # musí prejsť bez chyby
+```
+
+`tools/kontrola.py` je brána. Kontroluje nedoplnené `[DOPLNIŤ]`, fonty
+ťahané od Googlu, závislosť na starom Strapi, gtag mimo súhlasu, rozbité
+odkazy, canonical, sitemap aj to, či všetkých šesť adries zo starého webu
+niekde končí. Keď skončí nenulovým kódom, nenasadzuj — a je jedno, ako to
+vyzerá inak.
+
+Celý postup migrácie vrátane nastavení Vercelu a návratu späť je
+v **[MIGRACIA.md](MIGRACIA.md)**.
 
 ## Čo ešte zostáva
 
