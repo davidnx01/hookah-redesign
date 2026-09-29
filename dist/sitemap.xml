@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.hookah.sk/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ru</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ua</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/vodne-fajky</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/vodne-fajky"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/vodne-fajky"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/vodne-fajky"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/vodne-fajky"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ru/vodne-fajky</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/vodne-fajky"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/vodne-fajky"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/vodne-fajky"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/vodne-fajky"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ua/vodne-fajky</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/vodne-fajky"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/vodne-fajky"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/vodne-fajky"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/vodne-fajky"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/menu</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/menu"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/menu"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/menu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/menu"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ru/menu</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/menu"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/menu"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/menu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/menu"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ua/menu</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/menu"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/menu"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/menu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/menu"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/skola-majstra</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/skola-majstra"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/skola-majstra"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/skola-majstra"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/skola-majstra"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ru/skola-majstra</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/skola-majstra"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/skola-majstra"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/skola-majstra"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/skola-majstra"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ua/skola-majstra</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/skola-majstra"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/skola-majstra"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/skola-majstra"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/skola-majstra"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/kontakt</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/kontakt"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ru/kontakt</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/kontakt"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ua/kontakt</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/kontakt"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/cookies</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/cookies"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/cookies"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/cookies"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ru/cookies</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/cookies"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/cookies"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/cookies"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ua/cookies</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/cookies"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/cookies"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/cookies"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ochrana-osobnych-udajov</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/ochrana-osobnych-udajov"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/ochrana-osobnych-udajov"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/ochrana-osobnych-udajov"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/ochrana-osobnych-udajov"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ru/ochrana-osobnych-udajov</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/ochrana-osobnych-udajov"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/ochrana-osobnych-udajov"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/ochrana-osobnych-udajov"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/ochrana-osobnych-udajov"/>
+  </url>
+  <url>
+    <loc>https://www.hookah.sk/ua/ochrana-osobnych-udajov</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://www.hookah.sk/ochrana-osobnych-udajov"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.hookah.sk/ru/ochrana-osobnych-udajov"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://www.hookah.sk/ua/ochrana-osobnych-udajov"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.hookah.sk/ochrana-osobnych-udajov"/>
+  </url>
+</urlset>

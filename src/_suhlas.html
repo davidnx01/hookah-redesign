@@ -1,0 +1,43 @@
+<!-- Lišta súhlasu. Nie je to samostatná stránka — build.py tento kúsok vkladá
+     do každej stránky pred </body>, aby existoval na jednom mieste.
+     Prekladá sa normálne cez tools/oznac.py, lebo leží v src/.
+
+     Pozor pri úpravách: „Prijať všetko“ a „Odmietnuť všetko“ musia zostať
+     rovnaké tlačidlá na rovnakej úrovni. Ak sa odmietnutie schová alebo
+     zošedne, súhlas prestáva byť slobodný a celé je to na nič. -->
+<div aria-describedby="suhlasText" aria-labelledby="suhlasNadpis" class="suhlas" hidden="" id="suhlas" role="dialog">
+<div class="suhlas__box">
+<h2 class="suhlas__nadpis" data-i18n id="suhlasNadpis">Súkromie a cookies</h2>
+<p class="suhlas__text" data-i18n id="suhlasText">Nevyhnutné cookies používame vždy, bez nich by web nefungoval. Anonymnú štatistiku návštevnosti a vloženú mapu Google zapneme len s tvojím súhlasom. Rozhodnutie vieš kedykoľvek zmeniť.</p>
+<div class="suhlas__volby" hidden="" id="suhlasVolby">
+<div class="volba">
+<div class="volba__hlava">
+<span class="volba__nazov" data-i18n>Nevyhnutné</span>
+<span class="volba__vzdy" data-i18n>Vždy zapnuté</span>
+</div>
+<p class="volba__popis" data-i18n>Pamätajú si tvoju voľbu jazyka a toto rozhodnutie o cookies. Nedajú sa vypnúť, web by bez nich nefungoval.</p>
+</div>
+<label class="volba">
+<div class="volba__hlava">
+<span class="volba__nazov" data-i18n>Štatistika návštevnosti</span>
+<input class="volba__vstup" id="suhlasAnalytika" type="checkbox"/><span aria-hidden="true" class="volba__prepinac"></span>
+</div>
+<p class="volba__popis" data-i18n>Google Analytics. Ukazuje nám, ktoré stránky ľudia čítajú a odkiaľ prišli. Nespájame to s tvojím menom ani e-mailom.</p>
+</label>
+<label class="volba">
+<div class="volba__hlava">
+<span class="volba__nazov" data-i18n>Mapa Google</span>
+<input class="volba__vstup" id="suhlasExterne" type="checkbox"/><span aria-hidden="true" class="volba__prepinac"></span>
+</div>
+<p class="volba__popis" data-i18n>Vložená mapa s našou adresou. Načítava sa zo serverov Googlu, ktorý pritom vidí tvoju IP adresu. Bez súhlasu ukážeme len odkaz na navigáciu.</p>
+</label>
+</div>
+<div class="suhlas__tlacidla">
+<button class="btn btn--primary suhlas__btn" data-i18n id="suhlasPrijat" type="button">Prijať všetko</button>
+<button class="btn btn--primary suhlas__btn" data-i18n id="suhlasOdmietnut" type="button">Odmietnuť všetko</button>
+<button class="btn btn--primary suhlas__btn" data-i18n hidden="" id="suhlasUlozit" type="button">Uložiť voľbu</button>
+<button aria-controls="suhlasVolby" aria-expanded="false" class="suhlas__viac" data-i18n id="suhlasNastavenia" type="button">Nastavenia</button>
+</div>
+<p class="suhlas__pata" data-i18n><a href="cookies.html">Cookies</a> · <a href="ochrana-osobnych-udajov.html">Ochrana osobných údajov</a></p>
+</div>
+</div>

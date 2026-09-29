@@ -1,0 +1,55 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+
+  "framework": null,
+  "outputDirectory": "dist",
+
+  "cleanUrls": true,
+  "trailingSlash": false,
+
+  "redirects": [
+    {
+      "source": "/drinky",
+      "destination": "/menu",
+      "permanent": true
+    },
+    {
+      "source": "/drinky/:path*",
+      "destination": "/menu",
+      "permanent": true
+    }
+  ],
+
+  "headers": [
+    {
+      "source": "/assets/:file(.*\\.(?:css|js))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/:file(.*\\.(?:avif|webp|jpg|jpeg|png|svg|ico))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+        }
+      ]
+    }
+  ]
+}

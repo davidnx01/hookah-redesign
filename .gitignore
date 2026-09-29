@@ -1,0 +1,17 @@
+# Odvodené varianty fotiek — vyrobí ich optimize_images.py z img-source.
+# 16 MB, ktoré netreba verzovať; po klonovaní stačí spustiť ten skript.
+src/assets/img/
+
+# Originály fotiek v repozitári NECHÁVAME (sú 2 MB), inak by sa build
+# nedal zopakovať z čistého klonu.
+
+.DS_Store
+__pycache__/
+*.pyc
+.vercel
+
+# dočasný balík na náhľad
+_nahlad.tgz
+
+# pomocné zoznamy chýbajúcich prekladov, vyrába ich tools/oznac.py
+i18n/_chyba-*.json
