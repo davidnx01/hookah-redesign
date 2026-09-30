@@ -78,8 +78,8 @@ PRIORITY = {'index.html': '1.0', 'vodne-fajky.html': '0.9', 'menu.html': '0.9',
 # reťazce, ktoré dopĺňa JavaScript (stavová lišta) — idú priamo do stránky
 RUNTIME_KEYS = [
     'Otvorené teraz', 'Momentálne zatvorené', 'Zatvorené',
-    'zatvárame o', 'otvárame dnes o',
-    'Práve máme otvorené, zatvárame o', 'Práve máme zatvorené, otvárame dnes o',
+    'otvárame dnes o',
+    'Práve máme otvorené.', 'Práve máme zatvorené, otvárame dnes o',
     'dnes',
 ]
 

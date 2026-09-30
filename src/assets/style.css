@@ -9,6 +9,7 @@
   /* --- ZNAČKA (presné farby z pôvodného webu) --- */
   --blue:            #154399;   /* hsl(219 76% 34%) — primárna */
   --gold:            #F9CB34;   /* hsl(46 94% 59%)  — akcent   */
+  --green:           #2EC46E;   /* jediné použitie: „máme otvorené“ */
 
   /* Svetlejší odtieň tej istej modrej (rovnaký odtieň 219°, rovnaká sýtosť 76%,
      zvýšená svetlosť). Nutný pre text a linky: #154399 má na čiernej kontrast
@@ -71,7 +72,13 @@ a{ color:inherit; text-decoration:none; }
 ul,ol{ margin:0; padding:0; list-style:none; }
 figure{ margin:0; }
 dl,dd{ margin:0; }
-h1,h2,h3{ margin:0; font-family:var(--display); font-weight:700; line-height:1.1; letter-spacing:.01em; text-transform:uppercase; }
+h1,h2,h3{
+  margin:0; font-family:var(--display); font-weight:700;
+  /* 1.1 orezávalo mäkčene a dĺžne nad veľkými písmenami (Š, Č, Ú, Ž).
+     1.18 ich pustí celé a na vzhľade sa to prakticky neprejaví. */
+  line-height:1.18;
+  letter-spacing:.01em; text-transform:uppercase;
+}
 p{ margin:0; }
 
 .shell{ width:100%; max-width:var(--shell); margin-inline:auto; padding-inline:var(--gutter); }
@@ -224,6 +231,7 @@ p{ margin:0; }
   font-variant-numeric:tabular-nums;
 }
 .ph--tall{ aspect-ratio:3 / 4; }
+.ph.shot--sq{ aspect-ratio:1 / 1; }
 .ph--map{ grid-column:1 / -1; min-height:320px; }
 
 /* =========================================================
@@ -877,14 +885,15 @@ p{ margin:0; }
   width:9px; height:9px; flex:0 0 9px; border-radius:50%;
   background:var(--muted);
 }
-/* zlatá signalizuje jediný stav: máme otvorené */
+/* zelená signalizuje jediný stav: máme otvorené */
 .statusbar.is-open .statusbar__dot{
-  background:var(--gold);
+  background:var(--green);
   animation:pulse 2.6s ease-out infinite;
 }
+.statusbar.is-open .statusbar__text b{ color:var(--green); }
 @keyframes pulse{
-  0%{ box-shadow:0 0 0 0 var(--gold-30); }
-  70%{ box-shadow:0 0 0 9px rgba(249,203,52,0); }
+  0%{ box-shadow:0 0 0 0 rgba(46,196,110,.34); }
+  70%{ box-shadow:0 0 0 9px rgba(46,196,110,0); }
   100%{ box-shadow:0 0 0 0 rgba(249,203,52,0); }
 }
 
@@ -1072,6 +1081,11 @@ p{ margin:0; }
   .map--320, .map--420{ height:280px; }
 }
 
+/* --- tri štvorce vedľa seba --- */
+.trio{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.trio > .ph, .trio > .shot{ aspect-ratio:1 / 1; }
+@media (max-width:680px){ .trio{ grid-template-columns:1fr; } }
+
 /* --- dvojstĺpcový výklad --- */
 .duo{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
 .panel{
@@ -1090,12 +1104,17 @@ p{ margin:0; }
 /* --- stupnica sily --- */
 .scale{ display:grid; gap:12px; }
 .scale__row{
-  display:grid; grid-template-columns:minmax(0,150px) 1fr minmax(0,1.4fr);
+  /* Stĺpec musí uniesť „9 – 10 · Vyvážená“ na jednom riadku, inak sa
+     názvy stupňov lámu a stupnica vyzerá rozhádzane. */
+  display:grid; grid-template-columns:minmax(0,190px) 1fr minmax(0,1.4fr);
   gap:18px; align-items:center;
   padding:16px 0; border-top:1px solid var(--line);
 }
 .scale__row:last-child{ border-bottom:1px solid var(--line); }
-.scale__name{ font-family:var(--display); font-size:22px; letter-spacing:.04em; }
+.scale__name{
+  font-family:var(--display); font-size:21px; letter-spacing:.03em;
+  white-space:nowrap;
+}
 .scale__bar{ display:flex; gap:5px; }
 .scale__bar i{
   flex:1; height:8px; border-radius:2px;
@@ -1216,14 +1235,33 @@ p{ margin:0; }
   background:var(--blue); color:var(--white);
 }
 
-/* v hlavičke sa zmestí až od širších obrazoviek, inak žije v mobilnom menu */
-.lang--mobile{
-  display:none;
-  align-self:flex-start; margin-top:20px;
-}
+/* Prepínač jazyka musí byť na telefóne hneď po ruke, nie schovaný
+   v menu. V hlavičke preto zostáva vždy, len sa zmenší; kópia
+   v mobilnom menu by bola zbytočná, tak ju nezobrazujeme. */
+.lang--mobile{ display:none; }
 @media (max-width:1080px){
-  .lang--header{ display:none; }
-  .lang--mobile{ display:inline-flex; }
+  .lang--header{ padding:2px; }
+  .lang--header button{ padding:5px 9px; font-size:11px; letter-spacing:.06em; }
+}
+@media (max-width:680px){
+  /* Jazyk a tlačidlo sa do hlavičky naraz nezmestia. Rezervácia je
+     v spodnej lište stále na očiach, tak z hlavičky ustúpi ona. */
+  .header__bar{ gap:10px; }
+  .header__actions .btn{ display:none; }
+  .brand__text em{ display:none; }
+  .brand__text strong{ font-size:15px; letter-spacing:.04em; }
+  .brand__mark{ width:40px; height:40px; flex-basis:40px; }
+
+  /* Namiesto ďalšieho zlomu nech sa názov plynule zmenšuje a v krajnom
+     prípade oreže. Pevná šírka tu spôsobovala, že pri 390 px vytlačila
+     burger za okraj, hoci pri 360 px to ešte vyšlo. */
+  .brand{ flex-shrink:1; min-width:0; }
+  .brand__text{ min-width:0; }
+  .brand__text strong{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .header__actions{ flex-shrink:0; }
+}
+@media (max-width:380px){
+  .lang--header button{ padding:5px 7px; font-size:10px; }
 }
 
 /* =========================================================

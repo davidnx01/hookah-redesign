@@ -91,21 +91,22 @@
       if (bar) bar.classList.toggle('is-open', state.open);
       if (dot) dot.setAttribute('aria-hidden', 'true');
 
+      /* Keď máme otvorené, netreba hneď pripomínať, kedy zatvárame. */
       const headline = state.open
-        ? `<b>${tr('Otvorené teraz')}</b> · ${tr('zatvárame o')} ${state.closesAt}`
+        ? `<b>${tr('Otvorené teraz')}</b>`
         : `<b>${tr('Momentálne zatvorené')}</b> · ${tr('otvárame dnes o')} ${state.opensAt}`;
 
       if (text) text.innerHTML = headline;
 
       if (note) {
         note.textContent = state.open
-          ? `${tr('Práve máme otvorené, zatvárame o')} ${state.closesAt}.`
+          ? `${tr('Práve máme otvorené.')}`
           : `${tr('Práve máme zatvorené, otvárame dnes o')} ${state.opensAt}.`;
       }
 
       if (closingMeta) {
         closingMeta.textContent = state.open
-          ? `${tr('Otvorené teraz')} · ${tr('zatvárame o')} ${state.closesAt}`
+          ? `${tr('Otvorené teraz')}`
           : `${tr('Zatvorené')} · ${tr('otvárame dnes o')} ${state.opensAt}`;
       }
 
