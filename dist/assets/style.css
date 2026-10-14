@@ -834,9 +834,6 @@ rgba(0,0,0,.42);
 @media (max-width:680px){
 .map--320, .map--420{ height:280px; }
 }
-.trio{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-.trio > .ph, .trio > .shot{ aspect-ratio:1 / 1; }
-@media (max-width:680px){ .trio{ grid-template-columns:1fr; } }
 .duo{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
 .panel{
 padding:32px 30px;
